@@ -1,12 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import {
-  View,
-  FlatList,
-  SafeAreaView,
-  // Image,
-  // Text,
-  TextStyle,
-} from 'react-native';
+import { View, FlatList, SafeAreaView, TextStyle } from 'react-native';
 import type {
   AvaiableSeat,
   BlockedSeat,
@@ -16,44 +9,37 @@ import type {
   SeatLayout,
   SelectedSeats,
 } from './types';
-import {
-  // instructionSeatLayout,
-  // layoutImage,
-  mainContainerStyle,
-  // seatImageStyle,
-  // seatNumberStyle,
-  // selectedSeatColor,
-} from './styles';
+import { mainContainerStyle } from './styles';
 import SeatContainer from './component/SeatContainer';
 
 /*
 This are props that require to pass in order to get seat layout
 */
 export interface SeatsLayoutProps {
-  row: number;
-  layout: Layout;
-  driverPosition?: DriverPosition;
-  isSleeperLayout?: boolean;
-  maxSeatToSelect?: number;
-  selectedSeats?: Array<SelectedSeats>;
-  seatImage?: AvaiableSeat;
   blockedSeatImage?: BlockedSeat;
   driverImage?: DriverSeat;
-  numberTextStyle?: TextStyle;
+  driverPosition?: DriverPosition;
   getBookedSeats?: (seats: Array<SeatLayout>) => void;
+  isSleeperLayout?: boolean;
+  layout: Layout;
+  maxSeatToSelect?: number;
+  numberTextStyle?: TextStyle;
+  row: number;
+  seatImage?: AvaiableSeat;
+  selectedSeats?: Array<SelectedSeats>;
 }
 const SeatsLayout: React.FC<SeatsLayoutProps> = ({
-  row = 10,
-  layout = { columnOne: 2, columnTwo: 2 },
-  isSleeperLayout = false,
-  driverPosition = 'right',
-  maxSeatToSelect = 7,
-  selectedSeats = [],
-  seatImage = undefined,
   blockedSeatImage = undefined,
   driverImage = undefined,
-  numberTextStyle,
+  driverPosition = 'right',
   getBookedSeats,
+  isSleeperLayout = false,
+  layout = { columnOne: 2, columnTwo: 2 },
+  maxSeatToSelect = 7,
+  numberTextStyle,
+  row = 10,
+  seatImage = undefined,
+  selectedSeats = [],
 }) => {
   const [bookingSeat, setBookingSeat] = useState<Array<Array<SeatLayout>>>([]);
   const [userSelectedSeats, setUserSelectedSeat] = useState<Array<SeatLayout>>(
@@ -214,9 +200,6 @@ const SeatsLayout: React.FC<SeatsLayoutProps> = ({
   return (
     <SafeAreaView>
       <View style={mainContainerStyle}>
-        {/* <View style={instructionSeatLayout}>
-          {arrPreviewSeats.map((item: SeatLayout) => renderSeatConfig(item))}
-        </View> */}
         <FlatList
           showsVerticalScrollIndicator={false}
           bounces={false}

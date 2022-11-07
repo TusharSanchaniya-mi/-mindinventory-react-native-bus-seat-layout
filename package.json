@@ -1,5 +1,5 @@
 {
-  "name": "react-native-booking-ticket",
+  "name": "@mindinventory/react-native-booking-ticket",
   "version": "0.1.0",
   "description": "Booking Ticket",
   "main": "lib/commonjs/index",
@@ -13,7 +13,7 @@
     "android",
     "ios",
     "cpp",
-    "react-native-booking-ticket.podspec",
+    "@mindinventory/react-native-booking-ticket.podspec",
     "!lib/typescript/example",
     "!android/build",
     "!ios/build",
