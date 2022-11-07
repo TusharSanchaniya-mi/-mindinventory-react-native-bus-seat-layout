@@ -10,27 +10,27 @@ import { disableButton, seatContainerStyle, viewBorderStyle } from '../styles';
 import Seat from './Seat';
 
 export interface SeatContainerProps {
-  item: Array<SeatLayout>;
-  index: number;
+  blockedSeatImage?: BlockedSeat;
   disableSeat: boolean;
+  driverImage?: DriverSeat;
+  index: number;
   isSleeperLayout?: boolean;
+  item: Array<SeatLayout>;
+  numberTextStyle?: TextStyle;
   onSeatSelected?: (seat: SeatLayout) => void;
   seatImage?: AvaiableSeat;
-  driverImage?: DriverSeat;
-  blockedSeatImage?: BlockedSeat;
-  numberTextStyle?: TextStyle;
 }
 
 const SeatContainer: React.FC<SeatContainerProps> = ({
-  item,
+  blockedSeatImage = undefined,
+  disableSeat,
+  driverImage = undefined,
   index,
   isSleeperLayout,
-  disableSeat,
-  seatImage = undefined,
-  driverImage = undefined,
-  blockedSeatImage = undefined,
+  item,
   numberTextStyle,
   onSeatSelected,
+  seatImage = undefined,
 }) => {
   return (
     <View style={[seatContainerStyle, index === 0 && viewBorderStyle]}>

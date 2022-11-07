@@ -9,9 +9,7 @@ export default function App() {
       <SeatsLayout
         row={14}
         layout={{ columnOne: 3, columnTwo: 2 }}
-        driverPosition="right"
         selectedSeats={[
-          //   { seatNumber: 1, seatType: 'booked' },
           { seatNumber: 1, seatType: 'booked' },
           { seatNumber: 11, seatType: 'women' },
           { seatNumber: 17, seatType: 'women' },
@@ -21,9 +19,9 @@ export default function App() {
         // seatImage={{ image: SeatIcon, tintColor: '#B2B2B2' }}
         // driverImage={{ image: DriverIcon, tintColor: 'red' }}
         // blockedSeatImage={{image: DriverIcon, tintColor:'red'}}
-        // getBookedSeats={(seats) => {
-        // console.log('>>>>>>', seats);
-        // }}
+        getBookedSeats={(seats) => {
+          console.log('getBookedSeats :: ', seats);
+        }}
       />
     </SafeAreaView>
   );

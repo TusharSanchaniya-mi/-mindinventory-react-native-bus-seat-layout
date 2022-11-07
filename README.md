@@ -35,4 +35,13 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 
 ## License
 
-MIT
+@mindinventory/react-native-booking-ticket [MIT-licensed](https://github.com/Mindinventory/react-native-stagger-view/blob/main/LICENSE).
+
+
+### Let us know!
+
+We’d be really happy if you send us links to your projects where you use our component. Just send an email to sales@mindinventory.com And do let us know if you have any questions or suggestion regarding our work.
+
+## 📌 Credits :
+
+This project is made possible by the community surrounding it and especially the wonderful people. Rendering a list is basically clone form this repo [GitHub Repo](https://github.com/TusharSanchaniya-mi/mi-react-native-seat-layout/)
