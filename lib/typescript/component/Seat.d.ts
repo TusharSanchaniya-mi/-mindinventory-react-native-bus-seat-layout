@@ -2,14 +2,14 @@ import React from 'react';
 import { TextStyle } from 'react-native';
 import type { AvaiableSeat, BlockedSeat, DriverSeat, SeatLayout } from '../types/index';
 export interface SeatProps {
-    seatData: SeatLayout;
+    blockedSeatImage?: BlockedSeat;
+    driverImage?: DriverSeat;
     isDisable: boolean;
     isSleeperLayout?: boolean;
-    seatImage?: AvaiableSeat;
-    driverImage?: DriverSeat;
-    blockedSeatImage?: BlockedSeat;
     numberTextStyle?: TextStyle;
     onSeatSelect?: () => void;
+    seatData: SeatLayout;
+    seatImage?: AvaiableSeat;
 }
 export declare const seatHeightConst = 45;
 export declare const seatSleeperHeightConst = 85;
