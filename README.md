@@ -1,6 +1,6 @@
-# react-native-booking-ticket
+# react-native-booking-ticket [![](https://img.shields.io/npm/v/@mindinventory/react-native-tab-bar-interaction.svg)](https://www.npmjs.com/package/@mindinventory/react-native-tab-bar-interaction)
 
-React Native Booking Ticket [![](https://img.shields.io/npm/v/@mindinventory/react-native-tab-bar-interaction.svg)](https://www.npmjs.com/package/@mindinventory/react-native-tab-bar-interaction)
+React Native Booking Ticket 
 
 ## Installation
 
