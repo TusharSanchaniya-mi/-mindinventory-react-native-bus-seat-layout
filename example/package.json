@@ -1,6 +1,6 @@
 {
-  "name": "react-native-booking-ticket-example",
-  "description": "Example app for react-native-booking-ticket",
+  "name": "@mindinventory/react-native-booking-ticket-example",
+  "description": "Example app for @mindinventory/react-native-booking-ticket",
   "version": "0.0.1",
   "private": true,
   "scripts": {

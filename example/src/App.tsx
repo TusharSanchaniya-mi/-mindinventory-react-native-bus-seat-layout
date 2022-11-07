@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
-import SeatsLayout from 'react-native-booking-ticket';
+import SeatsLayout from '@mindinventory/react-native-booking-ticket';
 // import { DriverIcon, SeatIcon, SleeperSeatIcon } from '../assets';
 
 export default function App() {
