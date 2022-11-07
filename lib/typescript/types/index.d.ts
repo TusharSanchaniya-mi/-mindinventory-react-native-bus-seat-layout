@@ -1,14 +1,14 @@
 import type { ColorValue } from 'react-native';
 import type { ImageSourcePropType } from 'react-native';
-export declare type SeatType = 'booked' | 'available' | 'emptySpace' | 'door' | 'driver' | 'blocked' | 'women';
+export declare type SeatType = 'available' | 'blocked' | 'booked' | 'door' | 'driver' | 'emptySpace' | 'women';
 export declare type SelectedSeatType = 'booked' | 'women' | 'blocked';
-export declare type SeatImageAssetsType = 'available' | 'booked' | 'women' | 'blocked' | 'driver';
+export declare type SeatImageAssetsType = 'available' | 'blocked' | 'booked' | 'driver' | 'women';
 export interface SeatLayout {
     id: string;
-    type: SeatType;
-    seatNo?: number;
-    isStatusChange?: boolean;
     isSeatSeleced?: boolean;
+    isStatusChange?: boolean;
+    seatNo?: number;
+    type: SeatType;
 }
 export interface Layout {
     columnOne: number;
