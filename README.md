@@ -1,6 +1,6 @@
 # @mindinventory/react-native-bus-seat-layout [![](https://img.shields.io/npm/v/@mindinventory/react-native-tab-bar-interaction.svg)](https://www.npmjs.com/package/@mindinventory/react-native-tab-bar-interaction)
 
-A <b>@mindinventory/react-native-bus-seat-layout</b> library provides layout of seats for bus booking, you can give custom styles of seat numbers
+A <i>@mindinventory/react-native-bus-seat-layout</i> library provides seats layout for bus booking, you can give custom styles of seat numbers. also can give images for seat. you have to provide number of rows that you need to draw layout, you will get selected seats from props.
 
 ## Installation
 using npm:
@@ -13,7 +13,7 @@ yarn add @mindinventory/react-native-bus-seat-layout
 ```
 
 ## Preview
-![Simulator Screen Recording - iPhone 13 - 2022-11-08 at 11 34 00](https://user-images.githubusercontent.com/82019401/200490503-8485ac1d-bc3b-4b65-aba5-688da62ffdd8.gif)
+![Simulator Screen Recording - iPhone 13 - 2022-11-08 at 12 11 31](https://user-images.githubusercontent.com/82019401/200493768-018edf43-c756-4d22-ab65-464a7be76114.gif)
 ![Simulator Screen Recording - iPhone 13 - 2022-11-08 at 11 50 06](https://user-images.githubusercontent.com/82019401/200490528-056ee01f-1130-4fff-b1f2-2ef35ef13db8.gif)
 
 
