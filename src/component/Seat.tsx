@@ -1,11 +1,11 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {
-  TouchableOpacity,
-  ImageBackground,
   Dimensions,
+  ImageBackground,
   Text,
   TextStyle,
+  TouchableOpacity,
 } from 'react-native';
 import type {
   AvaiableSeat,
@@ -14,23 +14,23 @@ import type {
   SeatLayout,
 } from '../types/index';
 import {
-  layoutImage,
-  selectedSeatColor,
-  seatheight,
+  bookinmgSeatNumberStyle,
   disableButton,
   imgBackgroundStyle,
-  bookinmgSeatNumberStyle,
+  layoutImage,
+  seatheight,
+  selectedSeatColor,
 } from '../styles';
 
 export interface SeatProps {
-  seatData: SeatLayout;
+  blockedSeatImage?: BlockedSeat;
+  driverImage?: DriverSeat;
   isDisable: boolean;
   isSleeperLayout?: boolean;
-  seatImage?: AvaiableSeat;
-  driverImage?: DriverSeat;
-  blockedSeatImage?: BlockedSeat;
   numberTextStyle?: TextStyle;
   onSeatSelect?: () => void;
+  seatData: SeatLayout;
+  seatImage?: AvaiableSeat;
 }
 
 export const seatHeightConst = 45;
@@ -38,17 +38,17 @@ export const seatSleeperHeightConst = 85;
 export const seatWidthConst = Dimensions.get('screen').width / 6 - 20;
 
 const Seat: React.FC<SeatProps> = ({
-  seatData,
+  blockedSeatImage = undefined,
+  driverImage = undefined,
   isDisable,
   isSleeperLayout,
-  seatImage = undefined,
-  driverImage = undefined,
-  blockedSeatImage = undefined,
   numberTextStyle,
   onSeatSelect,
+  seatData,
+  seatImage = undefined,
 }) => {
   const getSourceImage = () => {
-    if (seatData.type === 'driver' && driverImage != undefined) {
+    if (seatData.type === 'driver' && driverImage !== undefined) {
       return driverImage.image;
     } else if (
       (seatData.type === 'available' ||
@@ -110,8 +110,10 @@ const Seat: React.FC<SeatProps> = ({
             imageStyle={{
               tintColor: getTintColorImage(),
               alignSelf: 'center',
+              borderRadius: 1,
+              padding: 2,
             }}
-            resizeMode="cover"
+            resizeMode="contain"
           >
             {seatData.type !== 'driver' &&
               seatData.type === 'booked' &&

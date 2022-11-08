@@ -2,29 +2,29 @@ import type { ColorValue } from 'react-native';
 import type { ImageSourcePropType } from 'react-native';
 
 export type SeatType =
-  | 'booked'
   | 'available'
-  | 'emptySpace'
+  | 'blocked'
+  | 'booked'
   | 'door'
   | 'driver'
-  | 'blocked'
+  | 'emptySpace'
   | 'women';
 
 export type SelectedSeatType = 'booked' | 'women' | 'blocked';
 
 export type SeatImageAssetsType =
   | 'available'
-  | 'booked'
-  | 'women'
   | 'blocked'
-  | 'driver';
+  | 'booked'
+  | 'driver'
+  | 'women';
 
 export interface SeatLayout {
   id: string;
-  type: SeatType;
-  seatNo?: number;
-  isStatusChange?: boolean;
   isSeatSeleced?: boolean;
+  isStatusChange?: boolean;
+  seatNo?: number;
+  type: SeatType;
 }
 export interface Layout {
   columnOne: number;
