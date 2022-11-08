@@ -81,7 +81,6 @@ const SeatsLayout: React.FC<SeatsLayoutProps> = ({
             seatLayout = {
               id: `${i},${j}`,
               type: driverPosition === 'left' ? 'emptySpace' : 'driver',
-              // type: driverPosition == 'left' ? 'emptySpace' : 'driver',
             };
             seatArray.push(seatLayout);
           } else {
@@ -160,7 +159,8 @@ const SeatsLayout: React.FC<SeatsLayoutProps> = ({
         .split(',')
         .map((item) => Number(item));
       let changeItem = seat;
-      changeItem.type = changeItem.type == 'available' ? 'booked' : 'available';
+      changeItem.type =
+        changeItem.type === 'available' ? 'booked' : 'available';
       changeItem.isStatusChange = true;
       allChangedItem[arrindexs[0]][arrindexs[1]] = changeItem;
 

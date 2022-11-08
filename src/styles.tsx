@@ -48,7 +48,7 @@ export const selectedSeatColor = {
   door: 'skyblue',
   driver: '#696969',
   blocked: '#DC143C',
-  women: '#EE96B4',
+  women: '#E8296A',
 };
 
 export const seatheight = {
@@ -87,11 +87,9 @@ export const mainContainerStyle: ViewStyle = {
   borderWidth: 1,
   borderRadius: 20,
   borderColor: 'gray',
-  backgroundColor: 'rgba(1,1,1,0.1)',
+  backgroundColor: 'white',
   padding: 10,
   height: '100%',
-  // alignSelf: 'center',
-  // justifyContent: 'center',
 };
 
 export const instructionSeatLayout: ViewStyle = {
