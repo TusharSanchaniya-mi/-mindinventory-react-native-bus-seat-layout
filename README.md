@@ -1,6 +1,6 @@
 # @mindinventory/react-native-bus-seat-layout [![](https://img.shields.io/npm/v/@mindinventory/react-native-tab-bar-interaction.svg)](https://www.npmjs.com/package/@mindinventory/react-native-tab-bar-interaction)
 
-React Native seat layout.
+A <b>@mindinventory/react-native-bus-seat-layout</b> library provides layout of seats for bus booking, you can give custom styles of seat numbers
 
 ## Installation
 using npm:
