@@ -1,15 +1,21 @@
-# @mindinventory/react-native-booking-ticket [![](https://img.shields.io/npm/v/@mindinventory/react-native-tab-bar-interaction.svg)](https://www.npmjs.com/package/@mindinventory/react-native-tab-bar-interaction)
+# @mindinventory/react-native-bus-seat-layout [![](https://img.shields.io/npm/v/@mindinventory/react-native-tab-bar-interaction.svg)](https://www.npmjs.com/package/@mindinventory/react-native-tab-bar-interaction)
 
-React Native Booking Ticket 
+React Native seat layout.
 
 ## Installation
+using npm:
+```sh
+npm install @mindinventory/react-native-bus-seat-layout
+```
+using yarn:
+```sh
+yarn add @mindinventory/react-native-bus-seat-layout
+```
 
-```sh
-npm install @mindinventory/react-native-booking-ticket
-```
-```sh
-yarn add @mindinventory/react-native-booking-ticket
-```
+## Preview
+![Simulator Screen Recording - iPhone 13 - 2022-11-08 at 11 34 00](https://user-images.githubusercontent.com/82019401/200490503-8485ac1d-bc3b-4b65-aba5-688da62ffdd8.gif)
+![Simulator Screen Recording - iPhone 13 - 2022-11-08 at 11 50 06](https://user-images.githubusercontent.com/82019401/200490528-056ee01f-1130-4fff-b1f2-2ef35ef13db8.gif)
+
 
 ### Supported platform
 - Android
@@ -17,8 +23,29 @@ yarn add @mindinventory/react-native-booking-ticket
 
 ## Usage
 ```js
-import SeatsLayout from "@mindinventory/react-native-booking-ticket";
+import SeatsLayout from "@mindinventory/react-native-bus-seat-layout";
 ```
+
+```js
+
+<SeatsLayout
+    row={14}
+    layout={{ columnOne: 3, columnTwo: 2 }}
+    selectedSeats={[
+        { seatNumber: 1, seatType: 'booked' },
+        { seatNumber: 11, seatType: 'women' },
+        { seatNumber: 17, seatType: 'women' },
+        { seatNumber: 43, seatType: 'blocked' },
+    ]}
+    numberTextStyle={{ fontSize: 12 }}
+    seatImage={{ image: SleeperSeatIcon, tintColor: '#B2B2B2' }}
+    getBookedSeats={(seats) => {
+        console.log('getBookedSeats :: ', seats);
+    }}
+/>
+```
+
+
 # Props to use
 | Parameter       | Type                              | Description                                                                         |
 | --------------- | --------------------------------- | -----------                                                                         |
@@ -35,13 +62,13 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 
 ## License
 
-@mindinventory/react-native-booking-ticket [MIT-licensed](https://github.com/Mindinventory/react-native-stagger-view/blob/main/LICENSE).
+@mindinventory/react-native-bus-seat-layout [MIT-licensed](https://github.com/TusharSanchaniya-mi/mi-react-native-seat-layout/blob/main/LICENSE).
 
+# Let us know!
 
-### Let us know!
+If you use our open-source libraries in your project, please make sure to credit us and Give a star to www.mindinventory.com
 
-We’d be really happy if you send us links to your projects where you use our component. Just send an email to sales@mindinventory.com And do let us know if you have any questions or suggestion regarding our work.
-
-## 📌 Credits :
-
-This project is made possible by the community surrounding it and especially the wonderful people. Rendering a list is basically clone form this repo [GitHub Repo](https://github.com/TusharSanchaniya-mi/mi-react-native-seat-layout/)
+<p><h4>Please feel free to use this component and Let us know if you are interested to building Apps or Designing Products.</h4>
+<a href="https://www.mindinventory.com/contact-us.php?utm_source=gthb&utm_medium=repo&utm_campaign=react-native-bus-seat-layout" target="__blank">
+<img src="https://github.com/Sammindinventory/MindInventory/blob/main/hirebutton.png" width="203" height="43"  alt="app development">
+</a>

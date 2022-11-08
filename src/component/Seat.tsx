@@ -48,7 +48,7 @@ const Seat: React.FC<SeatProps> = ({
   seatImage = undefined,
 }) => {
   const getSourceImage = () => {
-    if (seatData.type === 'driver' && driverImage != undefined) {
+    if (seatData.type === 'driver' && driverImage !== undefined) {
       return driverImage.image;
     } else if (
       (seatData.type === 'available' ||
@@ -110,8 +110,10 @@ const Seat: React.FC<SeatProps> = ({
             imageStyle={{
               tintColor: getTintColorImage(),
               alignSelf: 'center',
+              borderRadius: 1,
+              padding: 2,
             }}
-            resizeMode="cover"
+            resizeMode="contain"
           >
             {seatData.type !== 'driver' &&
               seatData.type === 'booked' &&
