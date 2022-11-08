@@ -56,11 +56,11 @@ import SeatsLayout from "@mindinventory/react-native-bus-seat-layout";
 | maxSeatToSelect | _number (Optional)_               | Allow uset to select maximum number of seats to book in one go. Default value `7`.  |
 | selectedSeats   | _Array<SelectedSeats> (Optional)_ | Accepts value seatNumber `number` and seatType `number` which accepts value from (`booked` or `women` or `blocked`). Default its set to blank array.                                                                         |
 
-## Contributing
+## Contributing!
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
-## License
+## License!
 
 @mindinventory/react-native-bus-seat-layout [MIT-licensed](https://github.com/TusharSanchaniya-mi/mi-react-native-seat-layout/blob/main/LICENSE).
 
